@@ -58,13 +58,13 @@ class _VerificationScreenState extends State<VerificationScreen> {
             ],
             decoration: InputDecoration(
               focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(width: 3, color: AppColor.primary),
+                borderSide: BorderSide(width: 3, color: Colors.red),
               ),
               enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(width: 3, color: otp1.isNotEmpty ? AppColor.primary : AppColor.text),
+                borderSide: BorderSide(width: 3, color: otp1.isNotEmpty ? Colors.red : Colors.black),
               ),
             ),
-            cursorColor: AppColor.primary,
+            cursorColor: Colors.red,
             obscureText: isHideOTP,
             autofocus: true,
             focusNode: focusNodeOtp1,
@@ -106,14 +106,14 @@ class _VerificationScreenState extends State<VerificationScreen> {
               ],
               decoration: InputDecoration(
                 focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(width: 3, color: AppColor.primary),
+                  borderSide: BorderSide(width: 3, color: Colors.red),
                 ),
                 enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(width: 3, color: otp2.isNotEmpty ? AppColor.primary : AppColor.text),
+                  borderSide: BorderSide(width: 3, color: otp2.isNotEmpty ? Colors.red : Colors.black),
                 ),
               ),
               keyboardType: TextInputType.number,
-              cursorColor: AppColor.primary,
+              cursorColor: Colors.red,
               autofocus: true,
               focusNode: focusNodeOtp2,
               obscureText: isHideOTP,
@@ -156,13 +156,14 @@ class _VerificationScreenState extends State<VerificationScreen> {
               ],
               decoration: InputDecoration(
                 focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(width: 3, color: AppColor.primary),
+                  borderSide: BorderSide(width: 3, color: Colors.red),
                 ),
                 enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(width: 3, color: otp3.isNotEmpty ? AppColor.primary : AppColor.text),
+                  borderSide: BorderSide(width: 3, color: otp3.isNotEmpty ? Colors.red : Colors.black
+                                        ),
                 ),
               ),
-              cursorColor: AppColor.primary,
+              cursorColor: Colors.red,
               obscureText: isHideOTP,
               autofocus: true,
               keyboardType: TextInputType.number,
@@ -206,14 +207,14 @@ class _VerificationScreenState extends State<VerificationScreen> {
               ],
               decoration: InputDecoration(
                 focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(width: 3, color: AppColor.primary),
+                  borderSide: BorderSide(width: 3, color: Colors.red),
                 ),
                 enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(width: 3, color: otp4.isNotEmpty ? AppColor.primary : AppColor.text),
+                  borderSide: BorderSide(width: 3, color: otp4.isNotEmpty ? Colors.red : Colors.black),
                 ),
               ),
               keyboardType: TextInputType.number,
-              cursorColor: AppColor.primary,
+              cursorColor: Colors.red,
               obscureText: isHideOTP,
               autofocus: true,
               focusNode: focusNodeOtp4,
@@ -256,13 +257,13 @@ class _VerificationScreenState extends State<VerificationScreen> {
               ],
               decoration: InputDecoration(
                 focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(width: 3, color: AppColor.primary),
+                  borderSide: BorderSide(width: 3, color: Colors.red),
                 ),
                 enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(width: 3, color: otp5.isNotEmpty ? AppColor.primary : AppColor.text),
+                  borderSide: BorderSide(width: 3, color: otp5.isNotEmpty ? Colors.red : Colors.black),
                 ),
               ),
-              cursorColor: AppColor.primary,
+              cursorColor: Colors.red,
               obscureText: isHideOTP,
               autofocus: true,
               keyboardType: TextInputType.number,
@@ -306,14 +307,14 @@ class _VerificationScreenState extends State<VerificationScreen> {
               ],
               decoration: InputDecoration(
                 focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(width: 3, color: AppColor.primary),
+                  borderSide: BorderSide(width: 3, color: Colors.red),
                 ),
                 enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(width: 3, color: otp6.isNotEmpty ? AppColor.primary : AppColor.text),
+                  borderSide: BorderSide(width: 3, color: otp6.isNotEmpty ? Colors.red : Colors.black),
                 ),
               ),
               keyboardType: TextInputType.number,
-              cursorColor: AppColor.primary,
+              cursorColor: Colors.red,
               obscureText: isHideOTP,
               autofocus: true,
               focusNode: focusNodeOtp6,
@@ -340,7 +341,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
             isHideOTP = !isHideOTP;
           });
         },
-        icon: SvgPicture.asset(isHideOTP ? ImageSVG.iconEye : ImageSVG.iconEyeClose, height: 16),
+        icon: Icon(isHideOTP ? Icons.visibility : Icons.visibility_off),
       ),
       // Padding(
       //   padding: const EdgeInsets.only(left: 4.0, right: 4.0),
@@ -352,14 +353,6 @@ class _VerificationScreenState extends State<VerificationScreen> {
 
     return Scaffold(
       appBar: null,
-      bottomNavigationBar: isPortrait
-          ? SvgPicture.asset(
-              ImageSVG.bottomCurves,
-              width: screenSize.width,
-            )
-          : Container(
-              height: 2,
-            ),
       body: SafeArea(
         child: Center(
           child: Container(
