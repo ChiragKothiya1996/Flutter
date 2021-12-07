@@ -60,14 +60,10 @@ class WaveSliderState extends State<WaveSlider> {
   }
 
   double _getBarStartPosition() {
-    // ((barEndPosition) < barStartPosition) ? (barEndPosition) : barStartPosition,
     return ((barEndPosition) < barStartPosition) ? barEndPosition : barStartPosition;
   }
 
   double _getBarEndPosition() {
-    // if ((barEndPosition + selectBarWidth + 50) >= widthSlider) {
-    //   return widthSlider;
-    // }
     return ((barStartPosition + selectBarWidth) > barEndPosition) ? (barStartPosition + selectBarWidth) : barEndPosition;
   }
 
